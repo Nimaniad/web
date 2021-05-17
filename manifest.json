@@ -1,0 +1,17 @@
+{
+    "name": "VirtualON",
+    "short_name": "VirtualON",
+    "description": "Web Site for bookings and events in Virtual Reality",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "orientation": "portrait",
+    "display": "standalone",
+    "start_url": "./?utm_source=web_app_manifest",
+    "scope": "./",
+    "lang": "es-MX",
+    "icons": [{
+        "src": "./src/public/img/virtual-1.png",
+        "sizes": "240x240",
+        "type": "image/png"
+    }]
+}

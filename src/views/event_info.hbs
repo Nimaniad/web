@@ -1,0 +1,49 @@
+<div class="container p-4 overflow-auto">
+    <div class="row ">
+        <div class="col mx-auto">
+            <div class="card text-center events mx-auto">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <table id="tabla_events" class="table-responsive-sm table-responsive-lg mx-auto pt-2 ">
+                            </thead>
+                            {{#each events}}
+                            <tr>
+                                <li>
+                                    <td class="td_info">Event name: </td>
+                                    <td>{{event_name}}</td>
+                                </li>
+                            </tr>
+                            <tr>
+                                <li>
+                                    <td class="td_info">Date: </td>
+                                    <td>{{event_date}}</td>
+                                </li>
+                            </tr>
+                            <tr>
+                                <li>
+                                    <td class="td_info">Contact Phone: </td>
+                                    <td>{{phone}}</td>
+                                </li>
+                            </tr>
+                            <tr>
+                                <li>
+                                    <td class="td_info">Adress: </td>
+                                    <td>{{adress}}</td>
+                                </li>
+                            </tr>
+                            <tr>
+                                <li>
+                                    <td class="td_info">Event description: </td>
+                                    <td>{{description}}</td>
+                                </li>
+                            </tr>
+                            {{/each}}
+                        </table>
+                    </ul>
+                </div>
+               <a href="/events"><i class="fas fa-arrow-circle-left fa-2x pb-4"></i></a> 
+            </div>
+        </div>
+
+    </div>
+</div>

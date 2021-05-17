@@ -1,0 +1,41 @@
+<div class="container p-4 overflow-auto">
+    <div class="row ">
+        <div class="col-md-12 conl-lg-12 col-sm-12 mx-auto ">
+            <div class="card text-center events mx-auto">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <table id="tabla_events" class="table-responsive-sm table-responsive-lg mx-auto pt-2 ">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Event</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Hour</th>
+                                </tr>
+                            </thead>
+                            </thead>
+                            {{#each events}}
+                            <tr>
+                                <li>
+                                    <td>
+                                        <a type="button" class="btn info"
+                                            href="/events/{{id}}">{{event_name}}</a>
+                                    </td>
+                                    <td>{{event_date}}</td>
+                                    <td>{{event_time}}</td>
+                                </li>
+                            </tr>
+                            {{else}}
+                            <div class="col-md-4 mx-auto">
+                                <div class="card card-body text-center">
+                                    <p>There are events yet.</p>
+                                </div>
+                            </div>
+                            {{/each}}
+                        </table>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

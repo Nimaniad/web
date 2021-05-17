@@ -1,0 +1,156 @@
+body {
+    background: #f5f6f5;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #4145b0, #2a72ce);
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -10;
+}
+
+.arriba {
+    z-index: 1;
+}
+
+.navbar {
+    background: linear-gradient(to right, #4145b0, #2a72ce);
+    z-index: 10;
+}
+
+.index {
+    width: 100vw;
+    height: 100vh;
+}
+
+.masthead {
+    color: white;
+    min-height: 30rem;
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+    background: url('/img/fondo.jpg');
+    background-position: center center;
+    background-repeat: blur(50px);
+    background: cover;
+}
+
+.masthead h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.masthead h3 {
+    font-size: 2rem;
+}
+
+@media (min-width: 992px) {
+    .masthead h1 {
+        font-size: 5rem;
+    }
+}
+
+.social-icons {
+    color: white;
+    margin: 0 30px;
+    padding-top: 30px;
+    box-shadow: 0 0 20 0 #7f7f7f3d;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.social-icons-2 {
+    color: #4145b0;
+    margin: 0 30px;
+    padding-top: 30px;
+    box-shadow: 0 0 20 0 #7f7f7f3d;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.signin {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: repeat;
+}
+
+.card {
+    box-shadow: 5px 5px 50px 7px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown-menu {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.nav-item {
+    border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+}
+
+.contact-info {
+    color: white;
+}
+
+.mail {
+    width: 70%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.events {
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+#tabla_bookings {
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+
+#tabla_events {
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+
+.td_info {
+    font-weight: bold;
+}
+
+.columna {
+    text-align: center;
+}
+
+.info {
+    background: white;
+    color: black;
+    border-radius: 0px;
+    border-bottom: 1px solid #2a72ce;
+}
+
+.button-profile {
+    color: white;
+}
+
+table td {
+    min-width: 70px;
+}

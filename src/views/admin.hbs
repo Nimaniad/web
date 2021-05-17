@@ -1,0 +1,140 @@
+<div class="container p-4 overflow-auto">
+    <div class="row">
+        <div class="col-md-12 conl-lg-12 col-sm-12 mx-auto columna">
+            <div class="card text-center events">
+                <div class="card-body">
+                    <h1>Admin View</h1>
+                    <h3>BOOKINGS:</h3>
+                    <ul class="list-group list-group-flush ">
+                        <table id="tabla_bookings" class="table-responsive-sm table-responsive-lg mx-auto pt-2 ">
+                            <thead>
+                                <tr>
+                                    <th scope="col col-sm-12">User</th>
+                                    <th scope="col col-sm-12">Date</th>
+                                    <th scope="col col-sm-12">Hour</th>
+                                    <th scope="col col-sm-12">Phone</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            </thead>
+                            {{#each bookings}}
+                            <tr>
+                                <li>
+                                    <td>{{user_name}}</td>
+                                    <td>{{bk_date}}</td>
+                                    <td>{{bk_time}}</td>
+                                    <td>{{phone}}</td>
+                                    <td>
+                                        <a class="btn btn-danger" data-toggle="modal" data-target="#Modal1">
+                                            <i class="fas fa-trash-alt button-profile"></i>
+                                        </a>
+                                        <!-- Modal for delete bookings -->
+                                        <div class="modal fade" id="Modal1" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLongTitle">
+                                                            You are sure you want to cancel the booking for the day
+                                                            {{bk_date}} at {{bk_time}}
+                                                        </h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Your booking will be canceled and the date free, in case you
+                                                        want to recover it you will have to request it again.
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                        <a type="button" href="/booking_delete/{{id}}"
+                                                            class="btn btn-danger">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                </li>
+                            </tr>
+                            {{/each}}
+                        </table>
+                    </ul>
+                    <h3 class="pt-4">EVENTS</h3>
+                    <ul class="list-group list-group-flush">
+                        <table id="tabla_events" class="table-responsive-sm table-responsive-lg mx-auto pt-2 ">
+                            <thead>
+                                <tr>
+                                    <th scope="col pt-2">Event</th>
+                                    <th scope="col pt-2">Date</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            </thead>
+                            {{#each events}}
+                            <tr>
+                                <li>
+                                    <td>{{event_name}}</td>
+                                    <td>{{event_date}}</td>
+                                    <td>
+                                        <a class="btn btn-danger" data-toggle="modal" data-target="#Modal2">
+                                            <i class="fas fa-trash-alt button-profile"></i>
+                                        </a>
+
+                                        <!-- Modal for delete event -->
+                                        <div class="modal fade" id="Modal2" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLongTitle">
+                                                            Are you sure to delete the event {{event_name}}?
+                                                        </h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        The next event will be deleted, it will not be shown to users
+                                                        and it will be deleted from the database.
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">
+                                                            Close
+                                                        </button>
+                                                        <a type="button" href="/event_delete/{{id}}"
+                                                            class="btn btn-danger">
+                                                            Delete
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="/event_edit/{{id}}" class="btn btn-secondary">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        </button>
+                                    </td>
+                                </li>
+                            </tr>
+                            {{/each}}
+                        </table>
+                    </ul>
+                    <div class="card text-center events mt-4">
+                        <a href="/events_admin" class="btn btn-info ">
+                            Create new event
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
